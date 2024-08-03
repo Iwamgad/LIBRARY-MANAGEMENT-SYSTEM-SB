@@ -1,9 +1,15 @@
 package com.dagmawi.LIBRARY_MANAGEMENT_SYSTEM_SB.entity;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 public class Book {
 
     private String title;
     private String author;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String ISBN;
     private boolean isBorrowed;
 
